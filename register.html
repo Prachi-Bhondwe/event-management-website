@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EventHub | Register</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="register-page">
+
+    <!-- NAVIGATION -->
+    <header class="site-header">
+
+        <nav class="site-nav">
+
+            <a href="index.html" class="brand">
+                Event<span>Hub</span>
+            </a>
+
+            <ul class="site-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="events.html">Events</a>
+                </li>
+
+                <li>
+                    <a href="register.html" class="active">Register</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="admin.html" class="organizer-link">
+                        Organizer
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- REGISTRATION PAGE -->
+
+    <main class="register-main">
+
+        <div class="register-intro">
+
+            <p class="register-label">
+                ✦ JOIN THE EXPERIENCE
+            </p>
+
+            <h1>
+                Your next
+                <span>event</span>
+                starts here.
+            </h1>
+
+            <p>
+                Fill in your details and reserve your place
+                at an upcoming EventHub event.
+            </p>
+
+        </div>
+
+
+        <!-- FORM CARD -->
+
+        <section class="register-card">
+
+            <div class="register-card-header">
+
+                <div class="register-icon">
+                    ✨
+                </div>
+
+                <div>
+                    <h2>Event Registration</h2>
+
+                    <p>
+                        Complete the form below
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form id="registrationForm">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+                </div>
+
+    <div class="form-group">
+
+    <label for="department">
+        Department
+    </label>
+
+    <select id="department" required>
+
+        <option value="">
+            -- Select Department --
+        </option>
+
+        <option value="Computer Engineering">
+            Computer Engineering
+        </option>
+
+        <option value="AIDS">
+            Artificial Intelligence & Data Science (AIDS)
+        </option>
+
+        <option value="AIML">
+            Artificial Intelligence & Machine Learning (AIML)
+        </option>
+
+        <option value="Civil Engineering">
+            Civil Engineering
+        </option>
+
+        <option value="Mechanical Engineering">
+            Mechanical Engineering
+        </option>
+
+        <option value="Electrical Engineering">
+            Electrical Engineering
+        </option>
+
+        <option value="ENTC Engineering">
+            ENTC Engineering
+        </option>
+
+        <option value="Other">
+            Other
+        </option>
+
+    </select>
+
+</div>
+
+
+
+                <div class="form-group">
+
+                    <label for="event">
+                        Select Event
+                    </label>
+
+                    <select id="event" required>
+
+    <option value="">
+        -- Select Event --
+    </option>
+
+</select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="register-submit"
+                >
+                    Register Now →
+                </button>
+
+            </form>
+
+
+            <p id="message"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <p>
+            © 2026 EventHub | Community Engagement Project
+        </p>
+
+    </footer>
+
+
+    <!-- EXISTING JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

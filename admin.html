@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EventHub | Organizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-page">
+
+    <!-- NAVBAR -->
+    <header class="site-header">
+        <nav class="site-nav">
+
+            <a href="index.html" class="brand">
+                Event<span>Hub</span>
+            </a>
+
+            <ul class="site-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="about.html">About</a></li>
+                <li>
+                    <a href="admin.html" class="organizer-link active">
+                        Organizer
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- ADMIN HERO -->
+    <section class="admin-hero">
+
+        <div class="admin-hero-content">
+
+            <p class="admin-label">✦ ORGANIZER DASHBOARD</p>
+
+            <h1>
+                Manage your <span>events.</span>
+            </h1>
+
+            <p>
+                Create events, manage event information and
+                keep track of participant registrations.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD -->
+    <main class="admin-main">
+
+        <!-- STATS -->
+        <section class="admin-stats">
+
+            <div class="admin-stat-card">
+                <span class="stat-icon">📅</span>
+                <div>
+                    <h3 id="eventCount">3</h3>
+                    <p>Total Events</p>
+                </div>
+            </div>
+
+            <div class="admin-stat-card">
+                <span class="stat-icon">👥</span>
+                <div>
+                    <h3 id="participantCount">0</h3>
+                    <p>Participants</p>
+                </div>
+            </div>
+
+            <div class="admin-stat-card">
+                <span class="stat-icon">⚡</span>
+                <div>
+                    <h3>24/7</h3>
+                    <p>Management</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ADD EVENT -->
+        <section class="admin-card">
+
+            <div class="admin-card-heading">
+
+                <div>
+                    <p class="admin-section-label">CREATE EVENT</p>
+
+                    <h2>
+                        Add a new <span>event.</span>
+                    </h2>
+
+                    <p>
+                        Enter the event details below to add
+                        a new event to EventHub.
+                    </p>
+                </div>
+
+                <div class="admin-heading-icon">
+                    +
+                </div>
+
+            </div>
+
+
+            <form id="eventForm" class="admin-form">
+
+                <div class="admin-form-grid">
+
+                    <div class="admin-field">
+                        <label for="eventName">
+                            Event Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="eventName"
+                            placeholder="Enter event name"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="admin-field">
+                        <label for="eventCategory">
+                            Category
+                        </label>
+
+                        <select id="eventCategory" required>
+                            <option value="">
+                                Select category
+                            </option>
+
+                            <option value="Technology">
+                                Technology
+                            </option>
+
+                            <option value="Cultural">
+                                Cultural
+                            </option>
+
+                            <option value="Sports">
+                                Sports
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <div class="admin-field">
+                        <label for="eventDate">
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="eventDate"
+                            required
+                        >
+                    </div>
+<div class="admin-field">
+    <label for="eventTime">
+        Time
+    </label>
+
+    <input
+        type="time"
+        id="eventTime"
+        required
+    >
+</div>
+
+                    <div class="admin-field">
+                        <label for="eventVenue">
+                            Venue
+                        </label>
+
+                        <input
+                            type="text"
+                            id="eventVenue"
+                            placeholder="Enter venue"
+                            required
+                        >
+                    </div>
+<div class="admin-field">
+    <div class="admin-field">
+
+    <label for="eventOrganizer">
+        Organizer
+    </label>
+
+    <input
+        type="text"
+        id="eventOrganizer"
+        placeholder="e.g. Event Committee"
+        required
+    >
+
+</div>
+
+
+<div class="admin-field">
+
+    <label for="eventDepartment">
+        Department
+    </label>
+
+    <select id="eventDepartment" required>
+        <option value="">
+            -- Select Department --
+        </option>
+
+        <option value="Computer Engineering">
+            Computer Engineering
+        </option>
+
+        <option value="Artificial Intelligence & Data Science (AIDS)">
+            Artificial Intelligence & Data Science (AIDS)
+        </option>
+
+        <option value="Artificial Intelligence & Machine Learning (AIML)">
+            Artificial Intelligence & Machine Learning (AIML)
+        </option>
+
+        <option value="Civil Engineering">
+            Civil Engineering
+        </option>
+
+        <option value="Mechanical Engineering">
+            Mechanical Engineering
+        </option>
+
+        <option value="Electrical Engineering">
+            Electrical Engineering
+        </option>
+
+        <option value="ENTC Engineering">
+            ENTC Engineering
+        </option>
+
+        <option value="Other">
+            Other
+        </option>
+
+    </select>
+
+</div>
+</div>
+                </div>
+
+
+                <div class="admin-field">
+                    <label for="eventDescription">
+                        Event Description
+                    </label>
+
+                    <textarea
+                        id="eventDescription"
+                        rows="4"
+                        placeholder="Write a short description..."
+                    ></textarea>
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="admin-submit"
+                >
+                    + Add Event
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- PARTICIPANTS -->
+        <section class="admin-card participants-card">
+
+            <div class="admin-card-heading">
+
+                <div>
+                    <p class="admin-section-label">
+                        REGISTRATIONS
+                    </p>
+
+                    <h2>
+                        Event <span>participants.</span>
+                    </h2>
+
+                    <p>
+                        View the participants who registered
+                        for your events.
+                    </p>
+                </div>
+
+                <div class="admin-heading-icon">
+                    👥
+                </div>
+
+            </div>
+
+
+            <div class="table-wrapper">
+<button
+    type="button"
+    class="clear-registration-btn"
+    onclick="clearRegistrations()"
+>
+    🗑 Clear All Registrations
+</button>
+                <table class="participants-table">
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Department</th>
+                            <th>Event</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="participantTableBody">
+
+                        <tr>
+                            <td colspan="4" class="empty-row">
+                                No registrations yet.
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+<!-- MY EVENTS -->
+<section class="admin-card">
+
+    <div class="admin-card-heading">
+
+        <div>
+            <p class="admin-section-label">
+                EVENT MANAGEMENT
+            </p>
+
+            <h2>
+                My <span>events.</span>
+            </h2>
+
+            <p>
+                View and manage all the events created by the organizer.
+            </p>
+        </div>
+
+        <div class="admin-heading-icon">
+            📅
+        </div>
+
+    </div>
+
+
+    <div id="adminEventContainer" class="admin-event-container">
+
+        <!-- Events will appear here -->
+
+    </div>
+
+</section>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>
+            © 2026 EventHub | Community Engagement Project
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
